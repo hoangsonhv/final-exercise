@@ -1,6 +1,6 @@
 @extends("layout")
 @section("main")
-<div id="page-wrapper">
+    <div id="page-wrapper">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
@@ -25,7 +25,7 @@
                 </thead>
                 <tbody>
                 @foreach ($product as $item)
-                    <tr>
+                    <tr align="center" style="padding-top:50px;" class="odd gradeC">
                         <td>{{$item->id}}</td>
                         <td>{{$item->name}}</td>
                         <td><img style="width: 70px;height: 70px" src="{{$item->getImage()}}"/></td>

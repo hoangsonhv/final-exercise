@@ -27,7 +27,7 @@
                     </thead>
                     <tbody>
                     @foreach ($product as $item)
-                        <tr>
+                        <tr class="odd gradeX" align="center">
                             <td>{{$item->id}}</td>
                             <td>{{$item->name}}</td>
                             <td><img style="width: 70px;height: 70px" src="{{$item->getImage()}}"/></td>
@@ -44,7 +44,7 @@
                                         @method('DELETE')
                                         @csrf
                                         <i class="fa fa-trash-o  fa-fw"></i>
-                                        <button type="button">Delete</button>
+                                        Delete
                                     </form>
                                 </a>
                             </td>
@@ -90,7 +90,7 @@
                                         @method('DELETE')
                                         @csrf
                                         <i class="fa fa-trash-o  fa-fw"></i>
-                                        <button type="button">Delete</button>
+                                      Delete
                                     </form>
                                 </a>
                             </td>
