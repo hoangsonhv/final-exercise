@@ -40,12 +40,10 @@
                             <td class="center"><a href="{{url("admin/products/edit",["id"=>$item->id])}}"><i class="fa fa-pencil fa-fw"></i>Sửa</a></td>
                             <td class="center">
                                 <a href="{{url("admin/products/delete",["id"=>$item->id])}}" style="text-decoration: none">
-                                    <form method="post" action="{{url("admin/products/delete",["id"=>$item->id])}}">
-                                        @method('DELETE')
-                                        @csrf
+                                   
                                         <i class="fa fa-trash-o  fa-fw"></i>
                                         Delete
-                                    </form>
+                                  
                                 </a>
                             </td>
                         </tr>
@@ -86,12 +84,10 @@
                             <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="{{url("admin/categories/edit",["id"=>$cat->id])}}">Edit</a></td>
                             <td class="center">
                                 <a href="{{url("admin/categories/delete",["id"=>$cat->id])}}" style="text-decoration: none">
-                                    <form method="post" action="{{url("admin/categories/delete",["id"=>$cat->id])}}">
-                                        @method('DELETE')
-                                        @csrf
+                                   
                                         <i class="fa fa-trash-o  fa-fw"></i>
                                       Delete
-                                    </form>
+                                   
                                 </a>
                             </td>
 
