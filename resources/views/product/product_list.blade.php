@@ -25,6 +25,9 @@
                 </thead>
                 <tbody>
                 @foreach ($product as $item)
+                 <form method="post" action="{{url('admin/products/delete',["id"=>$item->id])}}">
+                                    @method('DELETE')
+                                    @csrf
                     <tr align="center" style="padding-top:50px;" class="odd gradeC">
                         <td>{{$item->id}}</td>
                         <td>{{$item->name}}</td>
@@ -38,16 +41,15 @@
                         <td class="center"><a href="{{url("admin/products/edit",["id"=>$item->id])}}"><i class="fa fa-pencil fa-fw"></i>Sửa</a></td>
                         <td class="center">
                             <a href="{{url('admin/products/delete',["id"=>$item->id])}}" style="text-decoration: none">
-                                <form method="post" action="{{url('admin/products/delete',["id"=>$item->id])}}">
-                                    @method('DELETE')
-                                    @csrf
+                               
                                     <i class="fa fa-trash-o  fa-fw"></i>
                                     Delete
-                                </form>
+                               
                             </a>
                         </td>
 
                     </tr>
+                     </form>
                 @endforeach
                 </tbody>
             </table>
