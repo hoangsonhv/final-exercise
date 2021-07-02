@@ -121,7 +121,7 @@ class ProductController extends Controller
     }
 
     public function destroy($id){
-        Product::findOrFail($id)->delete();
+        Product::find($id)->delete();
         return redirect()->to("admin/products");
     }
 }
