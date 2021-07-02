@@ -22,7 +22,7 @@
                     </thead>
                     <tbody>
                     @foreach($category as $cat)
-                    <tr class="odd gradeX" align="center">
+                    <tr align="center">
                         <td>{{$cat->id}}</td>
                         <td>{{$cat->name}}</td>
                         <td>{{$cat->created_at}}</td>
