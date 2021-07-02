@@ -21,7 +21,7 @@ Route::middleware("admin")->group(function () {
     Route::post('/save', [ProductController::class, "save"]);
     Route::get('/products/edit/{id}', [ProductController::class, "edit"]);
     Route::post('/products/update/{id}', [ProductController::class, "update"]);
-    Route::delete('/products/delete/{id}', [ProductController::class, "destroy"]);
+    Route::get('/products/delete/{id}', [ProductController::class, "destroy"]);
 
     Route::get("/categories", [CategoryController::class, "categoryList"]);
     Route::get('/categories/themmoi', [CategoryController::class, "categoryAdd"]);
