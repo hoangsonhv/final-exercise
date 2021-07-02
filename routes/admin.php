@@ -28,5 +28,5 @@ Route::middleware("admin")->group(function () {
     Route::post('/categorySave', [CategoryController::class, "categorySave"]);
     Route::get('/categories/edit/{id}', [CategoryController::class, "categoryEdit"]);
     Route::post('/categories/update/{id}', [CategoryController::class, "categoryUpdate"]);
-    Route::delete('/categories/delete/{id}', [CategoryController::class, "delete"]);
+    Route::get('/categories/delete/{id}', [CategoryController::class, "delete"]);
 });
